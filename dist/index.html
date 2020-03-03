@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+
+    <nav class="navbar is-transparent">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://sharif.thekanaan.com">
+          <img src="./images/logo.png" alt="" width="35" height="50">
+        </a>
+        <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    
+      <div id="navbarExampleTransparentExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="/">
+            Home
+          </a>
+          <a class="navbar-item" href="https://sharif.thekanaan.com/">
+            Website
+          </a>
+          <a class="navbar-item" href="https://github.com/Sharizzle">
+            Portfolio
+          </a>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              My Links
+            </a>
+            <div class="navbar-dropdown is-boxed">
+              <a class="navbar-item" href="https://linkedin.com/in/sharifkanaan/">
+                Linkedin
+              </a>
+              <a class="navbar-item" href="https://twitter.com/Sharizzle317">
+                Twitter
+              </a>
+              <a class="navbar-item" href="https://sharifs-blog.thekanaan.com/">
+                Blog
+              </a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="field is-grouped">
+              <p class="control">
+                <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" target="_blank" href="https://twitter.com/intent/tweet?text=I found a cool website that lets me compare movies!!!%0AHere is the link: https://sharif.thekanaan.com%0A&amp;hashtags=movies">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>
+                    Tweet
+                  </span>
+                </a>
+              </p>
+              <p class="control">
+                <a class="button is-primary" href="https://github.com/Sharizzle">
+                  <span class="icon">
+                    <i class="fas fa-download"></i>
+                  </span>
+                  <span>See Code</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <section class="hero is-info is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            <!-- <span class="icon">
+              <i class="fas fa-film fa-sm" style="margin-right: 10px;"></i>
+            </span> -->
+            Movie Showdown
+          </h1>
+          <h3 class="subtitle">
+            Sharif Kanaan - Mechanical Engineer | Programmer
+          </h3>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div id="left-autocomplete"></div>
+          <div id="left-summary"></div>
+        </div>
+
+        <div class="column">
+          <div id="right-autocomplete"></div>
+          <div id="right-summary"></div>
+        </div>
+      </div>
+
+      <div class="column is-half notification is-info tutorial">
+        <h1 class="title">Search For Two Movies</h1>
+        <p class="subtitle">We will help you decide what to watch!</p>
+      </div>
+
+      
+    <div class="final">
+      
+    </div>
+
+    <section class="hero is-success is-bold is-hidden result">
+      <div class="hero-body result-body">
+        <h1 class = "winner"></h1>
+      </div>
+      </section>
+
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="autocomplete.js"></script>
+    <script src="index.js"></script>
+    <script>
+      const burger = () => {
+	    let burger = document.querySelector('.burger');
+	    let nav = document.querySelector('#' + burger.dataset.target);
+	    burger.addEventListener('click', () => {
+		      burger.classList.toggle('is-active');
+		      nav.classList.toggle('is-active');
+	      });
+    };
+
+    burger();
+      
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+	"name": "movie-showdown",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"deploy": "gh-pages -d dist"
+	},
+	"author": "Sharif Kanaan",
+	"homepage": "https://sharizzle.github.io/movie-showdown",
+	"license": "ISC",
+	"dependencies": {
+		"gh-pages": "^2.2.0"
+	}
+}
